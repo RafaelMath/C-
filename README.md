@@ -1,2 +1,1 @@
-# Linguagem-de-programa-o-1
-Trabalhos e exercícios 
+# Linguagem.de.programacao.1
