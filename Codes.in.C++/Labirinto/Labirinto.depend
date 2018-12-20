@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1533232395 source:c:\users\aluno.ci-hp\documents\labirinto\main.cpp
+	<stdio.h>
+	<conio.h>
+	"labirinto.h"
+	"teclado.h"
+
+1533232333 source:c:\users\aluno.ci-hp\documents\labirinto\labirinto.cpp
+	<stdio.h>
+	<stdlib.h>
+	"labirinto.h"
+	"teclado.h"
+
+1533234374 c:\users\aluno.ci-hp\documents\labirinto\labirinto.h
+
+1533061004 c:\users\aluno.ci-hp\documents\labirinto\teclado.h
+
+1533060966 source:c:\users\aluno.ci-hp\documents\labirinto\teclado.cpp
+	<conio.h>
+	<stdio.h>
+	"teclado.h"
+
