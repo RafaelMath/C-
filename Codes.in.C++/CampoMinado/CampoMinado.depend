@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1534387722 source:c:\users\rafael\desktop\campo.minado\camp2\campominado\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"biblioteca.h"
+	"teclado.h"
+
+1534619299 c:\users\rafael\desktop\campo.minado\camp2\campominado\biblioteca.h
+
+1534782668 source:c:\users\rafael\desktop\campo.minado\camp2\campominado\campo.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"biblioteca.h"
+	"teclado.h"
+
+1534439378 c:\users\rafael\desktop\campo.minado\camp2\campominado\teclado.h
+
+1534439355 source:c:\users\rafael\desktop\campo.minado\camp2\campominado\teclado.cpp
+	<conio.h>
+	<stdio.h>
+	"teclado.h"
+
