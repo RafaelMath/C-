@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1534995125 source:c:\users\rafael\desktop\teste\teste\biblioteca.cpp
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+
+1534994250 c:\users\rafael\desktop\teste\teste\biblioteca.h
+
+1534995081 source:c:\users\rafael\desktop\teste\teste\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+
+1546283012 source:g:\codigos.fonte\teste\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+
+1546282449 g:\codigos.fonte\teste\biblioteca.h
+
+1546282736 source:g:\codigos.fonte\teste\biblioteca.cpp
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+
+1546284456 source:g:\github\linguagem.de.programacao.1\codes.in.c++\lot.ez\biblioteca.cpp
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+
+1546282449 g:\github\linguagem.de.programacao.1\codes.in.c++\lot.ez\biblioteca.h
+
+1546284508 source:g:\github\linguagem.de.programacao.1\codes.in.c++\lot.ez\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+
