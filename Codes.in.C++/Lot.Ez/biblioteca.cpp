@@ -53,13 +53,12 @@ void imprime(Matriz *p)
 //*************************************************************
 void conta_incidencia(Matriz *p)
 { //incidencia em que um numero se repete
-    for(int i = 0; i<=p->num-1;i++)
-        for(int j = 1; j<=15; j++)
-         {  for(int a = 1; a<=25;a++)
-             { if(p->vetor1[i][j]== a)
-                p->incidencia[a][0] = p->incidencia[a][0]+1;
-             }
-         }
+    for(int n = 1;n<=25;n++)
+     {
+        p->incidencia[n][0] = procura_numero(n,p);
+        // 0 get.number.repetition
+        p->incidencia[n][1] = n;
+     }  // 1.get.number.ball
 }
 //*************************************************************
 int procura_numero(int n, Matriz *p)
@@ -86,9 +85,36 @@ void chute(Matriz *p)
 
 
 }
+//******************************************************************
+void print(Matriz *p)
+{
+     for(int i = 1; i<=p->dim;i++)
+            {
+                printf("numero %d: %d\t",p->incidencia[i][1],p->incidencia[i][0]);
+            }
+    printf("\n");
+}
+//******************************************************************
+void order(Matriz *p)
+{
+ for(int i = 1; i<=25; i++)
+  {
+    for(int j = i+1; j<=25; j++)
+     {
+       if(p->incidencia[i][0]<p->incidencia[j][0])
+        {
+            p->aux = p->incidencia[i][0];
+            p->aux2 = p->incidencia[i][1];
 
+            p->incidencia[i][0] = p->incidencia[j][0];
+            p->incidencia[i][1] = p->incidencia[j][1];
 
-
+            p->incidencia[j][0] = p->aux;
+            p->incidencia[j][1] = p->aux2;
+        }
+     }
+  }
+}
 
 
 
