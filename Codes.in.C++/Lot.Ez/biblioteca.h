@@ -5,7 +5,7 @@ struct Matriz
     int **vetor1;
     char **vetor2;
     int incidencia [81][2];
-    int numeros [15];
+    int numeros [16];
     int dim = 25;
     int aux,aux2;
 
@@ -23,4 +23,6 @@ void conta_incidencia(Matriz *p);
 void print();
 void order(Matriz *p);
 int procura_numero(int n, Matriz *p);
+void getnum(Matriz *p);
+
 

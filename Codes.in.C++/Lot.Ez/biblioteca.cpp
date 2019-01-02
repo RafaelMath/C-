@@ -41,7 +41,7 @@ fclose(f);
 void imprime(Matriz *p)
 {       //print vector
                 //LINHA
-            	for(int i = 0; i<=--p->num;i++)
+            	for(int i = 0; i<=p->num;i++)
                 {//COLUNA
                 for(int j = 1; j<=15;j++)
                 {
@@ -75,14 +75,24 @@ int procura_numero(int n, Matriz *p)
 }
 
 void chute(Matriz *p)
-{
-    scanf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &p->numeros[1],&p->numeros[2],&p->numeros[3],&p->numeros[4],&p->numeros[5],
-          &p->numeros[6],&p->numeros[7],&p->numeros[8],&p->numeros[9],&p->numeros[10],&p->numeros[11],&p->numeros[12],&p->numeros[13]
-          ,&p->numeros[14],&p->numeros[15]);
-                //falta comparar o chute com os jogos
+{       //save all into the struct
 
+    for(int i = 0; i < p->num; i++)
+	{   int cont = 0;
+		for(int j = 1; j <= 15; j++)
+		{
+			if(p->vetor1[i][j] == p->numeros[j])
+			{
+				cont++;
+			}
+			else
+				continue;
+        }
+        if(cont>10)
+        printf("%d ",cont);
 
-
+	}
+ //getchar();
 
 }
 //******************************************************************
@@ -115,6 +125,11 @@ void order(Matriz *p)
      }
   }
 }
+//*******************************************************************
+void getnum(Matriz *p)
+{
+              scanf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &p->numeros[1],&p->numeros[2],&p->numeros[3],&p->numeros[4],&p->numeros[5],&p->numeros[6],&p->numeros[7],&p->numeros[8],&p->numeros[9],&p->numeros[10],&p->numeros[11],&p->numeros[12],&p->numeros[13],&p->numeros[14],&p->numeros[15]);
 
+}
 
 
