@@ -15,14 +15,14 @@ struct global
     int posicao;
     int n;
 };
-
+void print();
 void chute(Matriz *p);
-void carrega_matriz(char *f,Matriz *p);
+void order(Matriz *p);
+void getnum(Matriz *p);
 void aloca(FILE *f, Matriz *p);
 void conta_incidencia(Matriz *p);
-void print();
-void order(Matriz *p);
 int procura_numero(int n, Matriz *p);
-void getnum(Matriz *p);
+void carrega_matriz(char *f,Matriz *p);
+
 
 

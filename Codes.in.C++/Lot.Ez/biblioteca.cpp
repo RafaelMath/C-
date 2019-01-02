@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include"biblioteca.h"
 void carrega_matriz(char *f,Matriz *p)
-{void aloca(FILE *f, Matriz *p);
+{
+   void aloca(FILE *f, Matriz *p);
     	FILE *file = fopen(f,"r");
 
 		if(file == NULL)
@@ -10,7 +11,8 @@ void carrega_matriz(char *f,Matriz *p)
 			printf("Arquivo nao pode ser aberto\n");
 			system("pause");
 			return ;
-		}else
+		}
+		else
             int num; //numero dimensao da matriz
             fscanf(file,"%i",&p->num);
             printf("%i\n\n",p->num);
@@ -41,14 +43,14 @@ fclose(f);
 void imprime(Matriz *p)
 {       //print vector
                 //LINHA
-            	for(int i = 0; i<=p->num;i++)
-                {//COLUNA
-                for(int j = 1; j<=15;j++)
-                {
-                    printf("%d ",p->vetor1[i][j]);
-                }
-                    printf("\n");
-                }
+    for(int i = 0; i<=p->num;i++)
+    {           //COLUNA
+        for(int j = 1; j<=15;j++)
+        {
+            printf("%d ",p->vetor1[i][j]);
+        }
+        printf("\n");
+    }
 }
 //*************************************************************
 void conta_incidencia(Matriz *p)
@@ -62,7 +64,8 @@ void conta_incidencia(Matriz *p)
 }
 //*************************************************************
 int procura_numero(int n, Matriz *p)
-{   int contador = 0;
+{
+    int contador = 0;
     for(int i = 0; i<=p->num-1;i++)
         for(int j = 1; j<=15; j++)
          {
@@ -78,7 +81,8 @@ void chute(Matriz *p)
 {       //save all into the struct
 
     for(int i = 0; i < p->num; i++)
-	{   int cont = 0;
+	{
+	    int cont = 0;
 		for(int j = 1; j <= 15; j++)
 		{
 			if(p->vetor1[i][j] == p->numeros[j])
@@ -89,7 +93,7 @@ void chute(Matriz *p)
 				continue;
         }
         if(cont>10)
-        printf("%d ",cont);
+            printf("%d ",cont);
 
 	}
  //getchar();
@@ -99,9 +103,9 @@ void chute(Matriz *p)
 void print(Matriz *p)
 {
      for(int i = 1; i<=p->dim;i++)
-            {
-                printf("numero %d: %d\t",p->incidencia[i][1],p->incidencia[i][0]);
-            }
+      {
+        printf("numero %d: %d\t",p->incidencia[i][1],p->incidencia[i][0]);
+      }
     printf("\n");
 }
 //******************************************************************
