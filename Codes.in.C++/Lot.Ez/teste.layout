@@ -4,17 +4,41 @@
 	<ActiveTarget name="Debug" />
 	<File name="biblioteca.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2596" topLine="0" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<Cursor1 position="2863" topLine="70" />
+=======
+			<Cursor1 position="296" topLine="0" />
+>>>>>>> 95963f698597b517b265a36227c25935e297baaf
+=======
+			<Cursor1 position="296" topLine="0" />
+>>>>>>> 95963f698597b517b265a36227c25935e297baaf
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="biblioteca.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="290" topLine="0" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<Cursor1 position="169" topLine="0" />
+=======
+			<Cursor1 position="463" topLine="0" />
+>>>>>>> 95963f698597b517b265a36227c25935e297baaf
+=======
+			<Cursor1 position="463" topLine="0" />
+>>>>>>> 95963f698597b517b265a36227c25935e297baaf
 		</Cursor>
 	</File>
-	<File name="biblioteca.h" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="117" topLine="7" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<Cursor1 position="333" topLine="0" />
+=======
+			<Cursor1 position="101" topLine="0" />
+>>>>>>> 95963f698597b517b265a36227c25935e297baaf
+=======
+			<Cursor1 position="101" topLine="0" />
+>>>>>>> 95963f698597b517b265a36227c25935e297baaf
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

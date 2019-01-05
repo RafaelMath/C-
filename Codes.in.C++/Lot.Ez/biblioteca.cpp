@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include"biblioteca.h"
 void carrega_matriz(char *f,Matriz *p)
-{void aloca(FILE *f, Matriz *p);
+{
+   void aloca(FILE *f, Matriz *p);
     	FILE *file = fopen(f,"r");
 
 		if(file == NULL)
@@ -10,7 +11,8 @@ void carrega_matriz(char *f,Matriz *p)
 			printf("Arquivo nao pode ser aberto\n");
 			system("pause");
 			return ;
-		}else
+		}
+		else
             int num; //numero dimensao da matriz
             fscanf(file,"%i",&p->num);
             printf("%i\n\n",p->num);
@@ -41,14 +43,14 @@ fclose(f);
 void imprime(Matriz *p)
 {       //print vector
                 //LINHA
-            	for(int i = 0; i<=--p->num;i++)
-                {//COLUNA
-                for(int j = 1; j<=15;j++)
-                {
-                    printf("%d ",p->vetor1[i][j]);
-                }
-                    printf("\n");
-                }
+    for(int i = 0; i<=p->num;i++)
+    {           //COLUNA
+        for(int j = 1; j<=15;j++)
+        {
+            printf("%d ",p->vetor1[i][j]);
+        }
+        printf("\n");
+    }
 }
 //*************************************************************
 void conta_incidencia(Matriz *p)
@@ -62,7 +64,8 @@ void conta_incidencia(Matriz *p)
 }
 //*************************************************************
 int procura_numero(int n, Matriz *p)
-{   int contador = 0;
+{
+    int contador = 0;
     for(int i = 0; i<=p->num-1;i++)
         for(int j = 1; j<=15; j++)
          {
@@ -75,23 +78,65 @@ int procura_numero(int n, Matriz *p)
 }
 
 void chute(Matriz *p)
+<<<<<<< HEAD
+<<<<<<< HEAD
 {
     scanf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &p->numeros[1],&p->numeros[2],&p->numeros[3],&p->numeros[4],&p->numeros[5],
           &p->numeros[6],&p->numeros[7],&p->numeros[8],&p->numeros[9],&p->numeros[10],&p->numeros[11],&p->numeros[12],&p->numeros[13]
           ,&p->numeros[14],&p->numeros[15]);
                 //falta comparar o chute com os jogos
+=======
+{       //save all into the struct
 
+    for(int i = 0; i < p->num; i++)
+	{
+	    int cont = 0;
+		for(int j = 1; j <= 15; j++)
+		{
+			if(p->vetor1[i][j] == p->numeros[j])
+			{
+				cont++;
+			}
+			else
+				continue;
+        }
+        if(cont>10)
+            printf("%d ",cont);
 
+	}
+ //getchar();
 
+>>>>>>> 95963f698597b517b265a36227c25935e297baaf
+=======
+{       //save all into the struct
 
+    for(int i = 0; i < p->num; i++)
+	{
+	    int cont = 0;
+		for(int j = 1; j <= 15; j++)
+		{
+			if(p->vetor1[i][j] == p->numeros[j])
+			{
+				cont++;
+			}
+			else
+				continue;
+        }
+        if(cont>10)
+            printf("%d ",cont);
+
+	}
+ //getchar();
+
+>>>>>>> 95963f698597b517b265a36227c25935e297baaf
 }
 //******************************************************************
 void print(Matriz *p)
 {
      for(int i = 1; i<=p->dim;i++)
-            {
-                printf("numero %d: %d\t",p->incidencia[i][1],p->incidencia[i][0]);
-            }
+      {
+        printf("numero %d: %d\t",p->incidencia[i][1],p->incidencia[i][0]);
+      }
     printf("\n");
 }
 //******************************************************************
@@ -115,6 +160,11 @@ void order(Matriz *p)
      }
   }
 }
+//*******************************************************************
+void getnum(Matriz *p)
+{
+              scanf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &p->numeros[1],&p->numeros[2],&p->numeros[3],&p->numeros[4],&p->numeros[5],&p->numeros[6],&p->numeros[7],&p->numeros[8],&p->numeros[9],&p->numeros[10],&p->numeros[11],&p->numeros[12],&p->numeros[13],&p->numeros[14],&p->numeros[15]);
 
+}
 
 

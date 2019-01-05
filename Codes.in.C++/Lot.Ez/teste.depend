@@ -30,10 +30,24 @@
 	<stdlib.h>
 	"biblioteca.h"
 
-1546290791 g:\github\linguagem.de.programacao.1\codes.in.c++\lot.ez\biblioteca.h
+1546291675 g:\github\linguagem.de.programacao.1\codes.in.c++\lot.ez\biblioteca.h
 
 1546290755 source:g:\github\linguagem.de.programacao.1\codes.in.c++\lot.ez\main.cpp
 	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+
+1546462011 source:d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\lot.ez\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+	<conio.h>
+
+1546470849 d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\lot.ez\biblioteca.h
+
+1546462045 source:d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\lot.ez\biblioteca.cpp
 	<stdio.h>
 	<stdlib.h>
 	"biblioteca.h"
