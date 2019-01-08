@@ -76,7 +76,7 @@ int procura_numero(int n, Matriz *p)
          }
  return contador;
 }
-
+//**************************************************************
 void chute(Matriz *p)
 {       //save all into the struct
 
@@ -135,5 +135,12 @@ void getnum(Matriz *p)
               scanf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &p->numeros[1],&p->numeros[2],&p->numeros[3],&p->numeros[4],&p->numeros[5],&p->numeros[6],&p->numeros[7],&p->numeros[8],&p->numeros[9],&p->numeros[10],&p->numeros[11],&p->numeros[12],&p->numeros[13],&p->numeros[14],&p->numeros[15]);
 
 }
+/*
+    Criar função para receber numero de arquivo txt sem limite de numeros
+    função para pesquisar números num jogo passar numero por argumentos na função
+    função vai retornar um numero inteiro referente aos acertos
+
+
+*/
 
 
