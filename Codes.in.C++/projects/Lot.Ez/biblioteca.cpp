@@ -25,7 +25,7 @@ void aloca(FILE *f, Matriz *p)
 {
      p->vetor1 = (int**) malloc(p->num* sizeof(int*));
      p->vetor2 = (char**) malloc(p->num* sizeof(char*));
-        //segunda dimensão
+        //segunda dimensÃ£o
         for(int i = 0; i < p->num; i++){
           p->vetor1[i]= (int*) malloc(p->num*sizeof(int));
           p->vetor2[i]= (char*) malloc(p->num*sizeof(char));
@@ -136,11 +136,9 @@ void getnum(Matriz *p)
 
 }
 /*
-    Criar função para receber numero de arquivo txt sem limite de numeros
-    função para pesquisar números num jogo passar numero por argumentos na função
-    função vai retornar um numero inteiro referente aos acertos
-
-
+    Criar funÃ§Ã£o para receber numeros de arquivos txt sem limite de tamanho
+    funÃ§Ã£o para pesquisar nÃºmeros no vetor passar numero por argumentos na funÃ§Ã£o
+    funÃ§Ã£o vai retornar um numero inteiro referente aos acertos
 */
 
 
