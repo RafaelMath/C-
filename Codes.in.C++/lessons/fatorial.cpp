@@ -14,4 +14,4 @@ int main(){
 		a=a*num;
 		printf("%0.lf\n",a);}
 
-}
+return 0;}
