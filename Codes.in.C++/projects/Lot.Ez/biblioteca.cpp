@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include"biblioteca.h"
-void carrega_matriz(char *f,Matriz *p)
+void carrega_matriz(char *data,char *f,Matriz *p)
 {
-   void aloca(FILE *f, Matriz *p);
+   void aloca(FILE *data,FILE *f, Matriz *p);
     	FILE *file = fopen(f,"r");
-
-		if(file == NULL)
+        FILE *arquivo = fopen(data,"r");
+        if(arquivo == NULL)
+        {
+			printf("Arquivo nao pode ser aberto\n");
+			system("pause");
+			return ;
+		}
+		else if(file == NULL)
         {
 			printf("Arquivo nao pode ser aberto\n");
 			system("pause");
@@ -16,26 +22,39 @@ void carrega_matriz(char *f,Matriz *p)
             int num; //numero dimensao da matriz
             fscanf(file,"%i",&p->num);
             printf("%i\n\n",p->num);
-            aloca(file, p);
+            fscanf(arquivo,"%i",&p->tamanhoKick);
+            printf("%i\n\n",p->tamanhoKick);
+            fscanf(arquivo,"%i",&p->tamanhoKick2);
+            printf("%i\n\n",p->tamanhoKick2);
+            aloca(arquivo,file, p);
 
 fclose(file);
 }
 //***************************************************
-void aloca(FILE *f, Matriz *p)
+void aloca(FILE *data,FILE *f, Matriz *p)
 {
      p->vetor1 = (int**) malloc(p->num* sizeof(int*));
      p->vetor2 = (char**) malloc(p->num* sizeof(char*));
-        //segunda dimensão
-        for(int i = 0; i < p->num; i++){
-          p->vetor1[i]= (int*) malloc(p->num*sizeof(int));
-          p->vetor2[i]= (char*) malloc(p->num*sizeof(char));
 
-                fscanf(f,"%d %s %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d",&p->vetor1[i][0],&p->vetor2[i][i]
-                        ,&p->vetor1[i][1],&p->vetor1[i][2],&p->vetor1[i][3]
-                        ,&p->vetor1[i][4],&p->vetor1[i][5],&p->vetor1[i][6],&p->vetor1[i][7],&p->vetor1[i][8]
-                        ,&p->vetor1[i][9],&p->vetor1[i][10],&p->vetor1[i][11],&p->vetor1[i][12],&p->vetor1[i][13]
-                        ,&p->vetor1[i][14],&p->vetor1[i][15]);
-            }
+        //segunda dimensão
+    for(int i = 0; i < p->num; i++)
+    {
+        p->vetor1[i]= (int*) malloc(p->num*sizeof(int));
+        p->vetor2[i]= (char*) malloc(p->num*sizeof(char));
+
+        fscanf(f,"%d %s %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d",&p->vetor1[i][0],&p->vetor2[i][i]
+                ,&p->vetor1[i][1],&p->vetor1[i][2],&p->vetor1[i][3],&p->vetor1[i][4],&p->vetor1[i][5]
+                ,&p->vetor1[i][6],&p->vetor1[i][7],&p->vetor1[i][8],&p->vetor1[i][9],&p->vetor1[i][10]
+                ,&p->vetor1[i][11],&p->vetor1[i][12],&p->vetor1[i][13],&p->vetor1[i][14],&p->vetor1[i][15]);
+    }
+    p->vetorKick = (int**) malloc(p->tamanhoKick* sizeof(int*));
+    for (int x = 0; x< p->tamanhoKick; x++)
+    {   p->vetorKick[x] = (int*) malloc(p->tamanhoKick2* sizeof(int));
+        for(int y = 0; y< p->tamanhoKick2; y++)
+        {
+            fscanf(data," %d ",&p->vetorKick[x][y]);
+        }
+    }
 fclose(f);
 }
 //******************************************************
@@ -132,13 +151,29 @@ void order(Matriz *p)
 //*******************************************************************
 void getnum(Matriz *p)
 {
-              scanf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &p->numeros[1],&p->numeros[2],&p->numeros[3],&p->numeros[4],&p->numeros[5],&p->numeros[6],&p->numeros[7],&p->numeros[8],&p->numeros[9],&p->numeros[10],&p->numeros[11],&p->numeros[12],&p->numeros[13],&p->numeros[14],&p->numeros[15]);
+    for(int i = 0; i < p->tamanhoKick;i++)
+    {
+        for(int j = 0; j < p->tamanhoKick2;j++)
+        {
+            printf("%d ",p->vetorKick[i][j]);
+        }printf("\n");
+    }         //scanf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &p->numeros[1],&p->numeros[2],&p->numeros[3],&p->numeros[4],&p->numeros[5],&p->numeros[6],&p->numeros[7],&p->numeros[8],&p->numeros[9],&p->numeros[10],&p->numeros[11],&p->numeros[12],&p->numeros[13],&p->numeros[14],&p->numeros[15]);
 
 }
+
+
+
 /*
-    Criar função para receber numeros de arquivos txt sem limite de tamanho
+    Criar função para receber numeros de arquivos txt sem limite de tamanho << done
     função para pesquisar números no vetor passar numero por argumentos na função
     função vai retornar um numero inteiro referente aos acertos
 */
+/*
+int n = input();
+char *array = malloc(n * sizeof(int));
 
+array [0]= 12;
+array[n-1] = 234;
 
+free(array);
+*/
