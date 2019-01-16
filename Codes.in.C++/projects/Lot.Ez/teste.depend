@@ -53,16 +53,16 @@
 	<stdlib.h>
 	"biblioteca.h"
 
-1547600018 source:g:\github\linguagem.de.programacao.1\codes.in.c++\projects\lot.ez\main.cpp
+1547602172 source:g:\github\linguagem.de.programacao.1\codes.in.c++\projects\lot.ez\main.cpp
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
 	"biblioteca.h"
 	<conio.h>
 
-1547600301 g:\github\linguagem.de.programacao.1\codes.in.c++\projects\lot.ez\biblioteca.h
+1547602054 g:\github\linguagem.de.programacao.1\codes.in.c++\projects\lot.ez\biblioteca.h
 
-1547601583 source:g:\github\linguagem.de.programacao.1\codes.in.c++\projects\lot.ez\biblioteca.cpp
+1547602846 source:g:\github\linguagem.de.programacao.1\codes.in.c++\projects\lot.ez\biblioteca.cpp
 	<stdio.h>
 	<stdlib.h>
 	"biblioteca.h"

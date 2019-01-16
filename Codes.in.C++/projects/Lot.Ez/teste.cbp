@@ -34,7 +34,9 @@
 		</Compiler>
 		<Unit filename="biblioteca.cpp" />
 		<Unit filename="biblioteca.h" />
+		<Unit filename="lotizi.txt" />
 		<Unit filename="main.cpp" />
+		<Unit filename="try.txt" />
 		<Extensions>
 			<code_completion />
 			<envvars />
