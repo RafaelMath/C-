@@ -18,6 +18,9 @@ struct global
     int posicao;
     int n;
 };
+
+
+void palpite();
 void print();
 void chute(Matriz *p);
 void order(Matriz *p);
@@ -26,6 +29,7 @@ void aloca(FILE *f, Matriz *p);
 void conta_incidencia(Matriz *p);
 int procura_numero(int n, Matriz *p);
 void carrega_matriz(char *arquivo,char *f,Matriz *p);
+int scan(Matriz *p,int i,int numero);
 
 
 

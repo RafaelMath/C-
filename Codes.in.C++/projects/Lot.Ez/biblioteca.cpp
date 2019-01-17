@@ -27,7 +27,7 @@ void carrega_matriz(char *data,char *f,Matriz *p)
             fscanf(arquivo,"%i",&p->tamanhoKick2);
             printf("%i\n\n",p->tamanhoKick2);
             aloca(arquivo,file, p);
-
+fclose(arquivo);
 fclose(file);
 }
 //***************************************************
@@ -86,8 +86,8 @@ void conta_incidencia(Matriz *p)
 int procura_numero(int n, Matriz *p)
 {
     int contador = 0;
-    for(int i = 0; i< p->num;i++)
-        for(int j = 1; j<=15; j++)
+    for(int i = 0; i< p->num;i++) //1753 linhas
+        for(int j = 1; j<=15; j++) //colunas 15
          {
             if(p->vetor1[i][j] == n)
             {
@@ -98,11 +98,19 @@ int procura_numero(int n, Matriz *p)
 }
 //**************************************************************
 void chute(Matriz *p)
-{       //save all into the struct
+{
+        int retorno = 0;
+         //save all into the struct
         //change name this method for scan
     for(int i = 0; i < p->num; i++) //linhas 1753
-	{
-	    int cont = 0;
+	{   for(int x = 0; x<p->tamanhoKick;x++)
+	    for(int j = 0; j< p->tamanhoKick2;j++)
+        {
+            retorno = retorno + scan(p,i,p->vetorKick[0][j]);
+        }
+
+
+   /* int cont = 0;
 		for(int j = 1; j <= 15; j++) //coluna 15
 		{
 			if(p->vetor1[i][j] == p->vetorKick[1][j-1])
@@ -111,14 +119,13 @@ void chute(Matriz *p)
 			}
 			else
 				continue;
-        }
-        if(cont>10)
-            printf("%d ",cont);
+        }*/
+        if(retorno>10)
+            printf("%d ",retorno);
+        retorno = 0;
 
-	}
+	}}
  //getchar();
-
-}
 //******************************************************************
 void print(Matriz *p)
 {
@@ -160,14 +167,23 @@ void printNumKick(Matriz *p)
         }printf("\n");
     }printf("\n");
 }
-//******************************************************************
+//*****************************************************************
+int scan(Matriz *p,int i,int numero)
+{
+    for(int j = 1; j<=15;j++)
+    {
+         if(p->vetor1[i][j]==numero)
+            return 1;
+        else
+            continue;
 
-
+    }
+return 0;}
 
 /*
     Criar função para receber numeros de arquivos txt sem limite de tamanho << done
-    função para pesquisar números no vetor passar numero por argumentos na função
-    função vai retornar um numero inteiro referente aos acertos
+    função para pesquisar números no vetor passar numero por argumentos na função << done
+    função vai retornar um numero inteiro referente aos acertos << done
 
       int n = input();
         char *array = malloc(n * sizeof(int));
