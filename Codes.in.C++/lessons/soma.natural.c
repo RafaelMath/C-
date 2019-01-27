@@ -1,13 +1,7 @@
 #include<stdio.h>
-int function(double a,double b)
-{   a--;
-    if( a <= b)
-        return b;
-    else
-        return (a + function( a,b ));
-}
-int main(){
-    double a, b;
+int main()
+{ double soma,a,b;
     scanf("%lf %lf",&a, &b);
-      printf("%.0lf\n",( b + function( b,a )));
+     soma = (a + b) * (b-a+1)/2;
+     printf("%.0lf\n",soma);
 return 0;}
