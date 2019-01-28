@@ -20,7 +20,7 @@ int main()
           print(&p);
           printNumKick(&p);
           chute(&p);
-         // repeat(&p);
+         repeat(&p);
           preenche(&p, &numero);
 return 0;
 }

@@ -15,7 +15,7 @@ struct Matriz
 };
 struct Number
 {
-    int grafo [26][26];
+    int grafo [16][16];
     int posicao;
     int n;
 };
