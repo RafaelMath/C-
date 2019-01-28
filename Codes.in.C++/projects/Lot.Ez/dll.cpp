@@ -45,28 +45,23 @@ void preenche(Matriz *p, Number *numero)
            numero->grafo[i][j] = 0;
         }
 	}
-
-
-    for(int m = 1;m<2;++m)
-      for(int j = 1; j <= 25; j++)
-        for(int i = 1; i <= 25; i++)
-        {   int n = 1;
-            //numero->grafo[j][i] = 0;
-            if(i == j)
+    for(int m = 1;m<1000;++m)
+        for(int i = 1; i <= 15; i++)
+            for(int j = 1; j <= 15; j++)
             {
-                //puts("teste i == j \n");
-                numero->grafo[j][i] = 0;
-            }
+                int temp1 = p->vetor1[m][i];
+                int temp2 = p->vetor1[m][j];
+                if(temp1 == temp2)
+                     numero->grafo[temp1][temp2] = 0;
+                else
+                     numero->grafo[temp1][temp2]++;
 
-            else    //>>>>>melhorar algoritmo<<<<<<
-            {       //>>>>>grafo 26/26
-                int temp1 = p->vetor1[m][i+1];
-                int temp2 = p->vetor1[m][i];
-                numero->grafo[temp1][temp2]= 1;
-                numero->grafo[temp2][temp1]= 1; //(temp1 * 100) + temp2; teste de posição na matriz
-                //printf("%d",i);
+               /*if((p->vetor1[m][i] == i)&&(p->vetor1[m][i+1]==j))
+                    numero->grafo[i][j]++;
+               else if((p->vetor1[m][i]==j)&&(p->vetor1[m][i+1]==i))
+                    numero->grafo[j][i]++;
+                */
             }
-        }
 
     for( int i = 1; i<=25 ;i++)
 	{
