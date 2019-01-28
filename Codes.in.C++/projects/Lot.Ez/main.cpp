@@ -4,6 +4,7 @@
 #include"biblioteca.h"
 #include<conio.h>
 
+
 using namespace std;
 
 int main()
@@ -11,6 +12,7 @@ int main()
         char *f = "lotizi.txt";
         char *arquivo = "try.txt";
         Matriz p;
+        Number numero;
 
           carrega_matriz(arquivo,f,&p);
           conta_incidencia(&p);
@@ -18,7 +20,8 @@ int main()
           print(&p);
           printNumKick(&p);
           chute(&p);
-
+         // repeat(&p);
+          preenche(&p, &numero);
 return 0;
 }
 

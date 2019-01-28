@@ -13,8 +13,9 @@ struct Matriz
     int aux,aux2;
 
 };
-struct global
+struct Number
 {
+    int grafo [26][26];
     int posicao;
     int n;
 };
@@ -30,6 +31,7 @@ void conta_incidencia(Matriz *p);
 int procura_numero(int n, Matriz *p);
 void carrega_matriz(char *arquivo,char *f,Matriz *p);
 int scan(Matriz *p,int i,int numero);
-
+void repeat(Matriz *p);
+void preenche(Matriz *p, Number *numero);
 
 
