@@ -104,11 +104,11 @@ void chute(Matriz *p)
         //change name this method for scan
     for(int i = 0; i < p->num; i++) //linhas 1753
 	{
-	    for(int x = 0; x<p->tamanhoKick;x++)    //tamanho try 2
+	    for(int x = 0; x<5;x++)    //tamanho try 2
            {
             for(int j = 0; j< p->tamanhoKick2;j++)  //tamanho try 15
             {
-                retorno = retorno + scan(p,i,p->vetorKick[0][j]);
+                retorno = retorno + scan(p,i,p->vetorKick[x][j]);
             }
 
 
@@ -122,8 +122,9 @@ void chute(Matriz *p)
 			else
 				continue;
         }*/
-            if(retorno>11)
-                printf("%d ",retorno);
+            if(retorno>13)
+                {printf("%d ",retorno);
+                    printf("(%d)\n",p->vetor1[i][0]);}
             retorno = 0;
         }
 	}

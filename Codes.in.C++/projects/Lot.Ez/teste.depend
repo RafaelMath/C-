@@ -67,21 +67,21 @@
 	<stdlib.h>
 	"biblioteca.h"
 
-1548642112 source:d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\projects\lot.ez\main.cpp
+1548706331 source:d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\projects\lot.ez\main.cpp
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
 	"biblioteca.h"
 	<conio.h>
 
-1548689657 d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\projects\lot.ez\biblioteca.h
+1548714289 d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\projects\lot.ez\biblioteca.h
 
-1548622835 source:d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\projects\lot.ez\biblioteca.cpp
+1548710013 source:d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\projects\lot.ez\biblioteca.cpp
 	<stdio.h>
 	<stdlib.h>
 	"biblioteca.h"
 
-1548690952 source:d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\projects\lot.ez\dll.cpp
+1548714289 source:d:\meus.codigos\linguagem-de-programa-o-1\codes.in.c++\projects\lot.ez\dll.cpp
 	<stdio.h>
 	<stdlib.h>
 	"biblioteca.h"

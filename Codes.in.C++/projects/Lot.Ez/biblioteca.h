@@ -33,5 +33,5 @@ void carrega_matriz(char *arquivo,char *f,Matriz *p);
 int scan(Matriz *p,int i,int numero);
 void repeat(Matriz *p);
 void preenche(Matriz *p, Number *numero);
-
+void selectionsort(int values[],int n);
 
