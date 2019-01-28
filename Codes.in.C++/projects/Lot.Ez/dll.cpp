@@ -38,14 +38,19 @@ void preenche(Matriz *p, Number *numero)
     FILE *tabelateste;
     tabelateste = fopen("tabelateste.txt","w");
 
-     for( int i = 1; i<=25 ;i++)
+     for( int i = 0; i<=25 ;i++)
 	{
-        for(int j = 1; j<=25;j++)
+        for(int j = 0; j<=25;j++)
         {
-           numero->grafo[i][j] = 0;
+            if(i==0)
+                numero->grafo[i][j] = j;
+            else if(j==0)
+                numero->grafo[i][j] = i;
+            else
+                numero->grafo[i][j] = 0;
         }
 	}
-    for(int m = 1;m<1000;++m)
+    for(int m = 1;m<p->num;++m)
         for(int i = 1; i <= 15; i++)
             for(int j = 1; j <= 15; j++)
             {
@@ -63,9 +68,9 @@ void preenche(Matriz *p, Number *numero)
                 */
             }
 
-    for( int i = 1; i<=25 ;i++)
+    for( int i = 0; i<=25 ;i++)
 	{
-        for(int j = 1; j<=25;j++)
+        for(int j = 0; j<=25;j++)
         {
             fprintf(tabelateste,"\t%d",numero->grafo[i][j]);
         }fprintf(tabelateste,"\n\n");
