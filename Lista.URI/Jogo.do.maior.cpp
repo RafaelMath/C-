@@ -8,7 +8,8 @@ int main(){
 		if(numRodada == 0)
 		return 0;
 		else
-	for(i = 1;i<=numRodada;i++){
+	for(i = 1;i<=numRodada;i++)
+	{
 		scanf("%d""%d",&a,&b);
 			if(a > b)
 				rankA++;
