@@ -61,7 +61,7 @@ void movimento(Player *ball)
 	
 }
 void render(Player *ball)
-{	/*
+{	
 	if(ball->direcao==2)
 	{
 		if(ball->linha+1 < d && ball->coluna+1 < d)
@@ -129,7 +129,7 @@ void render(Player *ball)
 		}
 		else 
 			ball->direcao = 2;
-	}	*/
+	}	/*
 	   	
 			if((ball->linha+1)!=(d-1)&&(ball->coluna+1)!=(d-1))
 				ball->direcao = 2;
@@ -139,7 +139,7 @@ void render(Player *ball)
 				ball->direcao = 4;
 			else if((ball->linha+1)<=(d-1)&&(ball->coluna-1)>=(0))
 				ball->direcao = 3;
-			
+		*/	
 			
 	movimento(ball);
 }
@@ -179,7 +179,7 @@ int main(){
 			printf("-");
 		}
 			
-			Sleep(500);
+			Sleep(50);
 		
 	}
 }
